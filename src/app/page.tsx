@@ -16,7 +16,7 @@ export default function Home() {
           <div className='max-w-6xl mx-auto -mb-6'>
             <TechStack />
           </div>
-          <ProjectShowcase />
+          {/* <ProjectShowcase /> */}
           <Footer />
         </div>
       </div>
