@@ -10,17 +10,17 @@ export default function Hero() {
           <br />
           with a twist
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-600">
+        <p className="text-xl md:text-2xl mb-8 text-white">
           Design subscriptions for everyone. Pause or cancel anytime.
         </p>
-        <Button 
-          size="lg" 
+        <Button
+          size="lg"
           className="text-lg px-8 py-6 bg-black text-white rounded-full hover:bg-black/90"
         >
           See plans
         </Button>
         <div className="mt-4 flex items-center justify-center gap-2 text-sm">
-          <span className="w-2 h-2 rounded-full bg-[#FF4D4D]"></span>
+          <span className="w-2 h-2 rounded-full bg-[#20ff76]"></span>
           <span>Available now</span>
         </div>
       </div>

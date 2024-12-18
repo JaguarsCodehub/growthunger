@@ -4,7 +4,7 @@ export default function GridBackground() {
       <div
         className='absolute inset-0'
         style={{
-          backgroundImage: `radial-gradient(#808080 2px, transparent 1px)`,
+          backgroundImage: `radial-gradient(#e2e2e2 2px, transparent 1px)`,
           backgroundSize: '24px 24px',
           opacity: 0.3,
         }}
