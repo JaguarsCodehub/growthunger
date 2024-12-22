@@ -1,53 +1,82 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { ArrowUpRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      title: 'Subscribe',
-      description:
-        'Choose a plan that fits your needs and subscribe to our service.',
-    },
-    {
-      title: 'Request',
-      description:
-        'Submit your design requests through our easy-to-use platform.',
-    },
-    {
-      title: 'Revise',
-      description:
-        "We'll work with you to refine the designs until you're 100% satisfied.",
-    },
-    {
-      title: 'Receive',
-      description:
-        'Get your finalized designs and put them to work for your business.',
-    },
-  ];
-
   return (
-    <section id='how-it-works' className='py-20 px-4 bg-gray-900'>
-      <h2 className='text-4xl font-bold text-center mb-12'>How It Works</h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>
-        {steps.map((step, index) => (
-          <Card key={index} className='bg-black border-gray-800'>
-            <CardHeader>
-              <CardTitle className='flex items-center'>
-                <span className='text-4xl font-bold mr-4'>{index + 1}</span>
-                {step.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>{step.description}</CardDescription>
-            </CardContent>
-          </Card>
-        ))}
+    <div className='py-8'>
+      {/* Section Title */}
+      <div className='text-center mb-16 space-y-4'>
+        <h2 className='text-5xl md:text-7xl font-bold tracking-tight text-black'>
+          We are engineers
+          <br />
+          <span className='text-slate-500 py-0 font-bold'>
+            of the modern
+          </span>{' '}
+          era 🍂
+        </h2>
+        <h2 className='text-xl md:text-2xl font-bold tracking-tight text-black'>
+          We sketch. We build. We deploy.
+        </h2>
+
+        
+        <Button variant='default' className='rounded-full border-black/20 mt-8'>
+          Everything from A to Z <ArrowUpRight className='ml-2' />
+        </Button>
       </div>
-    </section>
+
+      <div className='flex justify-center -mt-36'>
+        <img
+          src='/images/developer.png'
+          width={500}
+          height={200}
+          alt=''
+          className=''
+        />
+      </div>
+
+      {/* Cards Container */}
+      {/* <div className='flex flex-col md:flex-row justify-center items-center gap-20 px-6'>
+        <div className='relative group'>
+          <div className='absolute -top-2 -left-2 w-72 h-96 bg-slate-500 rounded-2xl shadow-md transform rotate-3 group-hover:rotate-6 transition duration-300'></div>
+          <div className='relative w-72 h-96 bg-white rounded-2xl shadow-lg p-6 transform -rotate-2 group-hover:rotate-0 transition duration-300'>
+            <div className='flex justify-center mb-6'>
+              <img
+                src='/icons/docker.svg'
+                alt='Clock Illustration'
+                className='w-24 h-24'
+              />
+            </div>
+            <h3 className='text-3xl font-bold text-gray-900 mb-2'>1500+</h3>
+            <p className='text-gray-600 text-lg font-medium mb-2'>
+              Institutional clients served
+            </p>
+            <p className='text-gray-500 text-sm'>
+              Register, make payment in seconds - and get your crypto just
+              minutes later.
+            </p>
+          </div>
+        </div>
+
+        <div className='relative group'>
+          <div className='absolute -top-2 -left-2 w-72 h-96 bg-slate-300 rounded-2xl shadow-md transform rotate-3 group-hover:rotate-6 transition duration-300'></div>
+          <div className='relative w-72 h-96 bg-white rounded-2xl shadow-lg p-6 transform -rotate-2 group-hover:rotate-0 transition duration-300'>
+            <div className='flex justify-center mb-6'>
+              <img
+                src='/icons/aws.svg'
+                alt='Card Illustration'
+                className='w-24 h-24'
+              />
+            </div>
+            <h3 className='text-3xl font-bold text-gray-900 mb-2'>300+</h3>
+            <p className='text-gray-600 text-lg font-medium mb-2'>
+              Digital assets available
+            </p>
+            <p className='text-gray-500 text-sm'>
+              Choose from credit card, payment app, or bank account.
+            </p>
+          </div>
+        </div>
+      </div> */}
+    </div>
   );
 }
