@@ -1,0 +1,5 @@
+- Create an engaging CTA
+- INtegrate the useEffect Notifications (Alex Hormozi talking about Growthunger)
+- Integrate Memes
+- Start creating offers
+- Get a landing page template for a tech agency website

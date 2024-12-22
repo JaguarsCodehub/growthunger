@@ -56,7 +56,7 @@ const features = [
 export default function Home() {
 
   return (
-    <div className='min-h-screen bg-slate-200'>
+    <div className='min-h-screen bg-gray-100'>
       <GridBackground />
 
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
