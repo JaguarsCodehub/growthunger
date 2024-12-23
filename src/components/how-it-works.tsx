@@ -1,30 +1,30 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Globe } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function HowItWorks() {
   return (
-    <div className='py-8'>
+    <div className='py-8 mt-16'>
       {/* Section Title */}
       <div className='text-center mb-16 space-y-4'>
-        <h2 className='text-5xl md:text-7xl font-bold tracking-tight text-black'>
+        <h2 className='text-4xl md:text-7xl font-bold tracking-tight text-black'>
           We are engineers
           <br />
-          <span className='text-slate-500 py-0 font-bold'>
+          <span className='text-green-600 py-0 font-bold'>
             of the modern
           </span>{' '}
           era 🍂
         </h2>
-        <h2 className='text-xl md:text-2xl font-bold tracking-tight text-black'>
+        <h2 className='text-xl md:text-2xl font-medium tracking-tight text-black'>
           We sketch. We build. We deploy.
         </h2>
 
-        
-        <Button variant='default' className='rounded-full border-black/20 mt-8'>
-          Everything from A to Z <ArrowUpRight className='ml-2' />
+
+        <Button variant='default' className='bg-green-400 text-black rounded-full border border-black mt-8'>
+          Everything from A to Z <Globe className='ml-2' />
         </Button>
       </div>
 
-      <div className='flex justify-center -mt-36'>
+      <div className='flex justify-center -mt-28'>
         <img
           src='/images/developer.png'
           width={500}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 const Projects = () => {
@@ -41,10 +41,10 @@ const Projects = () => {
         <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
           Checkout <span className='inline-block'>few of my</span>
           <br />
-          <span className='text-slate-600 px-2 font-bold'>
+          <span className='text-green-600 px-2 font-bold'>
             many projects
           </span>{' '}
-          now 🌚
+          now 🌐
         </h2>
         <Button variant='outline' className='rounded-full border-black/20 mt-8'>
           All my projects <ArrowUpRight className='ml-2' />

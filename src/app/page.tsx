@@ -16,6 +16,10 @@ import {
   Plus,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
+import AnimatedCards from '@/components/animated-cards';
+import RetroCTA from '@/components/retro-cta';
+import CTASection from '@/components/cta-section';
+import { NavigationMenuDemo } from '@/components/navigation';
 
 const features = [
   {
@@ -54,9 +58,23 @@ const features = [
 ];
 
 export default function Home() {
-
   return (
     <div className='min-h-screen bg-gray-100'>
+      {/* Sticky Navigation Bar */}
+      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-200'>
+        <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
+          <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
+          <div className='flex space-x-6'>
+            <a href='#' className='hover:text-gray-600'>Solutions</a>
+            <a href='#' className='hover:text-gray-600'>Typeform</a>
+            <a href='#contact' className='hover:text-gray-600'>Contact us</a>
+          </div>
+          <div className='flex space-x-4'>
+            <button className='bg-black text-white px-4 py-2 rounded'>Get started</button>
+          </div>
+        </div>
+      </nav>
+
       <GridBackground />
 
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
@@ -116,18 +134,34 @@ export default function Home() {
 
             {/* Decorative grid lines and plus icons */}
             <div className='absolute inset-0 -m-6'>
-              {/* Corner plus icons */}
-              <Plus className='absolute -top-3 -left-3 w-6 h-6 text-gray-600' />
-              <Plus className='absolute -top-3 -right-3 w-6 h-6 text-gray-600' />
-              <Plus className='absolute -bottom-3 -left-3 w-6 h-6 text-gray-600' />
-              <Plus className='absolute -bottom-3 -right-3 w-6 h-6 text-gray-600' />
+              {/* Corner plus icons with responsive adjustments */}
+              <Plus className='absolute -top-3 -left-3 hidden text-gray-600 md:w-8 md:h-8' />
+              <Plus className='absolute -top-3 -right-3 hidden text-gray-600 md:w-8 md:h-8' />
+              <Plus className='absolute -bottom-3 -left-3 hidden text-gray-600 md:w-8 md:h-8' />
+              <Plus className='absolute -bottom-3 -right-3 hidden text-gray-600 md:w-8 md:h-8' />
             </div>
           </div>
         </div>
       </div>
 
+      <AnimatedCards />
+
       <HowItWorks />
-      
+
+      <div id='contact' className='md:m-16 m-4'>
+        <CTASection />
+      </div>
+
+      <footer className='bg-gray-300 text-white py-4'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <p className='mb-2 text-black'>© 2024 Growthunger. All rights reserved.</p>
+          <div className='space-x-4'>
+            <a href='/about' className='hover:underline text-black'>Instagram</a>
+            <a href='/services' className='hover:underline text-black'>LinkedIn</a>
+            <a href='/contact' className='hover:underline text-black'>Github</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
