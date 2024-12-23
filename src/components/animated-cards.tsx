@@ -1,6 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import GridBackground from "./ui/grid-background"
 
 export default function AnimatedCards() {
     const cards = [
@@ -43,8 +44,9 @@ export default function AnimatedCards() {
     ]
 
     return (
-        <div className="hidden md:block w-full max-w-3xl md:max-w-2xl mx-auto px-4 py-12">
-            <h1 className="text-6xl font-bold text-center mb-16">SPENCER GABOR</h1>
+        <div className="hidden md:block w-full max-w-3xl md:max-w-2xl mx-auto px-4 py-8 relative">
+            <h1 className="text-4xl font-bold text-center">Tech Stack that Builds</h1>
+            <h2 className="text-5xl font-bold text-center mb-16 text-blue-500">Future-Ready Solutions.</h2>
             <div className="relative h-[300px] flex items-center justify-center">
                 {cards.map((card, index) => (
                     <Card
@@ -66,9 +68,9 @@ export default function AnimatedCards() {
                     </Card>
                 ))}
             </div>
-            <h2 className="text-4xl font-light text-gray-300 text-center mt-16">
+            {/* <h2 className="text-4xl font-light text-gray-300 text-center mt-16">
                 ILLUSTRATOR, DESIGNER & MURALIST
-            </h2>
+            </h2> */}
         </div>
     )
 }

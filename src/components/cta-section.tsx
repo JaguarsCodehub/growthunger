@@ -12,7 +12,7 @@ export default function CTASection() {
                 {Array.from({ length: 64 }).map((_, i) => (
                     <div
                         key={i}
-                        className="hidden md:block md:h-[100px] h-[30px] w-full rounded-lg bg-gray-100 border border-gray-300"
+                        className="hover:bg-green-200 hidden md:block md:h-[100px] h-[30px] w-full rounded-lg bg-gray-100 border border-gray-300"
                         aria-hidden="true"
                     />
                 ))}

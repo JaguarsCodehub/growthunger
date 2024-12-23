@@ -99,3 +99,15 @@ body {
   @apply relative mx-auto max-w-6xl px-4 py-24;
   background: transparent;
 }
+
+.bg-grid {
+  background-color: #f9f9f9;
+  /* Light background color */
+  background-image:
+    linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 50px 50px;
+  /* Size of the grid squares */
+  background-position: 0 0;
+  /* Position of the grid */
+}

@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <div className='min-h-screen bg-gray-100'>
       {/* Sticky Navigation Bar */}
-      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-200'>
+      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
           <div className='hidden md:flex space-x-6'>
