@@ -100,14 +100,30 @@ body {
   background: transparent;
 }
 
-.bg-grid {
-  background-color: #f9f9f9;
-  /* Light background color */
-  background-image:
-    linear-gradient(to right, #ccc 1px, transparent 1px),
-    linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: 50px 50px;
-  /* Size of the grid squares */
-  background-position: 0 0;
-  /* Position of the grid */
+.toast {
+  position: relative;
+  margin: 10px 0;
+  /* Space between toasts */
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Optional: Style for the close button */
+.toast button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
 }

@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react';
 import HowItWorks from '@/components/how-it-works';
 import Projects from '@/components/Projects';
 import TechStack from '@/components/tech-stack';
@@ -14,6 +15,9 @@ import {
   LayoutGrid,
   Settings2,
   Plus,
+  CheckCircle,
+  XCircle,
+  Info,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -21,6 +25,8 @@ import RetroCTA from '@/components/retro-cta';
 import CTASection from '@/components/cta-section';
 import { NavigationMenuDemo } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
+import { useToast, toast } from "@/hooks/use-toast";
+
 
 const features = [
   {
@@ -65,7 +71,24 @@ const features = [
   },
 ];
 
+const messages = [
+  { title: "Your order just arrived!", description: "It's your 13th BigMama order this month!", icon: <CheckCircle className="w-5 h-5 text-green-500" /> },
+  { title: "Balance Alert", description: "Another subscription you forgot to cancel", icon: <XCircle className="w-5 h-5 text-red-500" /> },
+  { title: "Daily Average", description: "Your startup won't grow by binge watching all day", icon: <Info className="w-5 h-5 text-blue-500" /> },
+  { title: "Gym Chad", description: "6 months ago you said tomorrow. Still in couch?", icon: <Info className="w-5 h-5 text-blue-500" /> },
+  { title: "Social Media", description: "0 likes on your last post", icon: <XCircle className="w-5 h-5 text-red-500" /> },
+];
+
 export default function Home() {
+
+  useEffect(() => {
+    messages.forEach((message, index) => {
+      setTimeout(() => {
+        toast(message);
+      }, index * 2000);
+    });
+  }, [toast]);
+
   return (
     <div className='min-h-screen bg-gray-100'>
       {/* Sticky Navigation Bar */}
@@ -80,11 +103,6 @@ export default function Home() {
           <div className='flex space-x-4'>
             <button className='bg-black text-white px-4 py-2 rounded'>Get started</button>
           </div>
-          {/* <div className='md:hidden'>
-            <button className='text-gray-600 focus:outline-none'>
-              <span className='material-icons'>menu</span>
-            </button>
-          </div> */}
         </div>
       </nav>
 
@@ -109,7 +127,7 @@ export default function Home() {
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
-            <Button className='px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90 transition-colors animate-bounce'>
+            <Button onClick={() => { /* Optional: Add functionality here */ }} className='px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90 transition-colors animate-bounce'>
               Click here
             </Button>
 
