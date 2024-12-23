@@ -26,7 +26,7 @@ export default function CTASection() {
                         size="lg"
                         className="mt-6 bg-gray-100 border border-gray-300 text-black hover:bg-green-400 hover:border-emerald-600 hover:text-black"
                     >
-                        Start building with us
+                        Got an Idea? Let's Build it.
                         <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                 </CardContent>

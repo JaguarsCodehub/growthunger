@@ -20,6 +20,7 @@ import AnimatedCards from '@/components/animated-cards';
 import RetroCTA from '@/components/retro-cta';
 import CTASection from '@/components/cta-section';
 import { NavigationMenuDemo } from '@/components/navigation';
+import { Button } from '@/components/ui/button';
 
 const features = [
   {
@@ -64,7 +65,7 @@ export default function Home() {
       <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-200'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
-          <div className='flex space-x-6'>
+          <div className='hidden md:flex space-x-6'>
             <a href='#' className='hover:text-gray-600'>Solutions</a>
             <a href='#' className='hover:text-gray-600'>Typeform</a>
             <a href='#contact' className='hover:text-gray-600'>Contact us</a>
@@ -72,6 +73,11 @@ export default function Home() {
           <div className='flex space-x-4'>
             <button className='bg-black text-white px-4 py-2 rounded'>Get started</button>
           </div>
+          {/* <div className='md:hidden'>
+            <button className='text-gray-600 focus:outline-none'>
+              <span className='material-icons'>menu</span>
+            </button>
+          </div> */}
         </div>
       </nav>
 
@@ -85,19 +91,20 @@ export default function Home() {
 
         <div className='max-w-4xl mx-auto text-center space-y-6'>
           <h1 className='text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
-            A design agency
+            We <span className='text-emerald-600'>build</span> the tech;
             <br />
-            with a twist
+
+            you drive the growth
           </h1>
 
           <p className='text-xl md:text-2xl text-black/90'>
-            Design subscriptions for everyone. Pause or cancel anytime.
+            Let's turn your vision into a world-class product
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
-            <button className='px-8 py-3 text-lg font-semibold text-white bg-black rounded-full hover:bg-black/90 transition-colors'>
-              See plans
-            </button>
+            <Button className='px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90 transition-colors animate-bounce'>
+              Click here
+            </Button>
 
             <div className='flex items-center space-x-2'>
               <div className='w-2 h-2 bg-emerald-500 rounded-full'></div>

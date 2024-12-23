@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Globe } from 'lucide-react';
+import { ArrowUpRight, Globe, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const Projects = () => {
@@ -46,8 +46,8 @@ const Projects = () => {
           </span>{' '}
           now 🌐
         </h2>
-        <Button variant='outline' className='rounded-full border-black/20 mt-8'>
-          All my projects <ArrowUpRight className='ml-2' />
+        <Button variant='outline' className='bg-red-300 border border-red-700 rounded-full text-black mt-8 hover:bg-red-500 hover:text-white'>
+          Let's connect right now <Mail className='ml-2' />
         </Button>
       </div>
 
