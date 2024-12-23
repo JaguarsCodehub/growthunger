@@ -25,36 +25,43 @@ import { Button } from '@/components/ui/button';
 const features = [
   {
     icon: CreditCard,
-    title: 'Accept payments',
+    title: 'MVP Development',
+    description: 'Rapidly prototyping minimum viable products to test ideas.'
   },
   {
     icon: Video,
-    title: 'Built-in video conferencing',
-    description: 'Cal Video is our in-house video conferencing platform.',
+    title: 'Cloud Based Solutions',
+    description: 'Scalable cloud infrastructure and SaaS products.'
   },
   {
     icon: Link2,
-    title: 'Short booking links',
+    title: 'Product Modernization',
+    description: 'Upgrading legacy systems to modern architectures.'
   },
   {
     icon: ShieldCheck,
-    title: 'Privacy first',
+    title: 'API Development',
+    description: 'Building robust APIs for seamless system communication.'
   },
   {
     icon: Globe,
-    title: '65+ languages',
+    title: 'Everything Contract Based',
+    description: 'Everything goes professionally by the contract.'
   },
   {
     icon: Plug2,
-    title: 'Easy embeds',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform apps for iOS and Android.'
   },
   {
     icon: LayoutGrid,
-    title: 'All your favorite apps',
+    title: 'Scalable Designs',
+    description: 'Preparing systems to handle future growth.'
   },
   {
     icon: Settings2,
-    title: 'Simple customization',
+    title: 'Wireframing and Prototyping',
+    description: 'Visualizing ideas before development.'
   },
 ];
 
@@ -125,9 +132,9 @@ export default function Home() {
             ...and so much more!
           </h1>
 
-          <div className='relative'>
+          <div className='relative m-12 md:m-44'>
             {/* Grid container */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6'>
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}
