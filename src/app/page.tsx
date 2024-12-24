@@ -25,6 +25,7 @@ import RetroCTA from '@/components/retro-cta';
 import CTASection from '@/components/cta-section';
 import { NavigationMenuDemo } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
+import { FlipWords } from '@/components/ui/flip-words';
 
 const features = [
   {
@@ -72,6 +73,8 @@ const features = [
 
 export default function Home() {
 
+  const words = ["build", "scale", "deploy", "design"];
+
 
   return (
     <div className='min-h-screen bg-gray-100'>
@@ -98,20 +101,24 @@ export default function Home() {
           <img src='/images/logo.png' alt='logo' className='w-48 h-24' />
         </div>
 
-        <div className='max-w-4xl mx-auto text-center space-y-6'>
-          <h1 className='text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
-            We <span className='text-emerald-600'>build</span> the tech;
+        <div className='z-40 max-w-4xl mx-auto text-center space-y-6'>
+          <h1 className=' text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
+            We <span className='text-emerald-600'><FlipWords words={words} /></span>the tech;
             <br />
 
             you drive the growth
           </h1>
 
           <p className='text-xl md:text-2xl text-black/90'>
-            Let's turn your vision into a world-class product
+            See the people you follow talking about us !
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
-            <Button onClick={() => console.log('Clicked')} className='cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'>
+            <Button
+              className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
+              onClick={() => {
+              }}
+            >
               Click here
             </Button>
 

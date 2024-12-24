@@ -46,7 +46,7 @@ const Projects = () => {
           </span>{' '}
           now 🌐
         </h2>
-        <Button variant='outline' className='bg-red-300 border border-red-700 rounded-full text-black mt-8 hover:bg-red-500 hover:text-white'>
+        <Button variant='outline' className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'>
           Let's connect right now <Mail className='ml-2' />
         </Button>
       </div>
