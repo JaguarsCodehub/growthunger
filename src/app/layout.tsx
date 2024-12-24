@@ -1,4 +1,4 @@
-import { Toaster } from '@/components/ui/sonner';
+import NotificationsList from '@/components/NotificationsList';
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 
@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
+        <NotificationsList />
         {children}
-        <Toaster />
       </body>
     </html>
   )

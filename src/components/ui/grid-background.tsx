@@ -1,8 +1,8 @@
 export default function GridBackground() {
   return (
-    <div className='absolute inset-0'>
+    <div className="absolute inset-0 z-10">
       <div
-        className='absolute inset-0'
+        className="absolute inset-0"
         style={{
           backgroundImage: `
             linear-gradient(to right, black 1px, transparent 1px),

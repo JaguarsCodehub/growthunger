@@ -25,8 +25,6 @@ import RetroCTA from '@/components/retro-cta';
 import CTASection from '@/components/cta-section';
 import { NavigationMenuDemo } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
-import { useToast, toast } from "@/hooks/use-toast";
-
 
 const features = [
   {
@@ -71,28 +69,14 @@ const features = [
   },
 ];
 
-const messages = [
-  { title: "Your order just arrived!", description: "It's your 13th BigMama order this month!", icon: <CheckCircle className="w-5 h-5 text-green-500" /> },
-  { title: "Balance Alert", description: "Another subscription you forgot to cancel", icon: <XCircle className="w-5 h-5 text-red-500" /> },
-  { title: "Daily Average", description: "Your startup won't grow by binge watching all day", icon: <Info className="w-5 h-5 text-blue-500" /> },
-  { title: "Gym Chad", description: "6 months ago you said tomorrow. Still in couch?", icon: <Info className="w-5 h-5 text-blue-500" /> },
-  { title: "Social Media", description: "0 likes on your last post", icon: <XCircle className="w-5 h-5 text-red-500" /> },
-];
 
 export default function Home() {
 
-  useEffect(() => {
-    messages.forEach((message, index) => {
-      setTimeout(() => {
-        toast(message);
-      }, index * 2000);
-    });
-  }, [toast]);
 
   return (
     <div className='min-h-screen bg-gray-100'>
       {/* Sticky Navigation Bar */}
-      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400'>
+      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
           <div className='hidden md:flex space-x-6'>
@@ -115,7 +99,7 @@ export default function Home() {
         </div>
 
         <div className='max-w-4xl mx-auto text-center space-y-6'>
-          <h1 className='text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
+          <h1 className='text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
             We <span className='text-emerald-600'>build</span> the tech;
             <br />
 
@@ -127,7 +111,7 @@ export default function Home() {
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
-            <Button onClick={() => { /* Optional: Add functionality here */ }} className='px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90 transition-colors animate-bounce'>
+            <Button onClick={() => console.log('Clicked')} className='cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'>
               Click here
             </Button>
 
