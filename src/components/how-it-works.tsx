@@ -15,9 +15,8 @@ export default function HowItWorks() {
           era 🍂
         </h2>
         <h2 className='text-xl md:text-2xl font-medium tracking-tight text-black'>
-          We sketch. We build. We deploy.
+          We sketch. We build. We deploy like God in a Box
         </h2>
-
 
         <Button variant='default' className='bg-green-400 text-black rounded-full border border-black mt-8'>
           Everything from A to Z <Globe className='ml-2' />

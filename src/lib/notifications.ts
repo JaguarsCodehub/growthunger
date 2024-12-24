@@ -3,14 +3,14 @@ export const notifications = [
         id: '1',
         avatar: '/images/x.png',
         title: 'Elon Musk just sent a tweet!',
-        message: "‘If GrowthHunger builds rockets, we’d already be on Mars.’ Dream big.",
+        message: "‘If Growthunger builds rockets, we’d already be on Mars.’ Dream big.",
         timestamp: 'now',
     },
     {
         id: '2',
         avatar: '/images/alex.png',
         title: 'Alex Hormozi just called.',
-        message: "He asked: 'What’s GrowthHunger’s offer? Because it sounds like $100M ideas in action",
+        message: "He asked: 'What’s Growthunger’s offer? Because it sounds like $100M ideas in action",
         timestamp: 'now',
     },
     {
@@ -30,7 +30,7 @@ export const notifications = [
     {
         id: '5',
         avatar: '/images/starbucks.png',
-        title: "Starbucks is brewing ideas with us.",
+        title: "Starbuck’s brewing ideas with us.",
         message: "‘How does GrowthHunger stay so smooth?’ Like lattes, but with code.",
         timestamp: 'now',
     }

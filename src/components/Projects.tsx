@@ -6,12 +6,13 @@ import Image from 'next/image';
 
 const Projects = () => {
   const projects = [
+
+    { id: 'chat', name: 'Scalable Chat App', preview: '/images/1.png' },
     {
       id: 'chess',
       name: 'Chess (scratch)',
       preview: '/images/chess.png',
     },
-    { id: 'chat', name: 'Scalable Chat App', preview: '/images/1.png' },
     {
       id: 'deploy',
       name: 'Deploy repo to cloud (like Vercel)',
@@ -39,7 +40,7 @@ const Projects = () => {
     <div className='w-full max-w-6xl mx-auto px-4 py-24'>
       <div className='text-center mb-16 space-y-8'>
         <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
-          Checkout <span className='inline-block'>few of my</span>
+          Checkout <span className='inline-block'>few of our</span>
           <br />
           <span className='text-green-600 px-2 font-bold'>
             many projects
@@ -51,7 +52,7 @@ const Projects = () => {
         </Button>
       </div>
 
-      <Tabs defaultValue='chess' className='w-full mt-20'>
+      <Tabs defaultValue='chat' className='w-full mt-20'>
         <TabsList className='w-full flex flex-wrap gap-2 bg-transparent h-auto p-0 mb-8'>
           {projects.map((project) => (
             <TabsTrigger

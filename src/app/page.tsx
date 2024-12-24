@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import HowItWorks from '@/components/how-it-works';
 import Projects from '@/components/Projects';
 import TechStack from '@/components/tech-stack';
@@ -18,6 +18,7 @@ import {
   CheckCircle,
   XCircle,
   Info,
+  Minus,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -26,6 +27,62 @@ import CTASection from '@/components/cta-section';
 import { NavigationMenuDemo } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
 import { FlipWords } from '@/components/ui/flip-words';
+import { DrawerDemo } from '@/components/drawer-demo';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import StartupGame from '@/components/StartupGame';
+import { Bar, BarChart, ResponsiveContainer } from 'recharts';
+import Feedback from '@/components/Feedback';
+
+const data = [
+  {
+    goal: 400,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 278,
+  },
+  {
+    goal: 189,
+  },
+  {
+    goal: 239,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 278,
+  },
+  {
+    goal: 189,
+  },
+  {
+    goal: 349,
+  },
+]
 
 const features = [
   {
@@ -72,23 +129,111 @@ const features = [
 
 
 export default function Home() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [goal, setGoal] = React.useState(350)
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+
+  function onClick(adjustment: number) {
+    setGoal(Math.max(200, Math.min(400, goal + adjustment)))
+  }
 
   const words = ["build", "scale", "deploy", "design"];
 
 
   return (
     <div className='min-h-screen bg-gray-100'>
+      {/* Drawer */}
+      {/* <Button
+        className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
+        onClick={() => setDrawerOpen(true)}
+      >
+        Click here
+      </Button> */}
+
+      <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
+        <DrawerContent>
+          <div className="mx-auto w-full max-w-sm">
+            <DrawerHeader>
+              <DrawerTitle>Rate Goal</DrawerTitle>
+              <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+            </DrawerHeader>
+            <div className="p-4 pb-0">
+              <div className="flex items-center justify-center space-x-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-8 w-8 shrink-0 rounded-full"
+                  onClick={() => onClick(-10)}
+                  disabled={goal <= 200}
+                >
+                  <Minus />
+                  <span className="sr-only">Decrease</span>
+                </Button>
+                <div className="flex-1 text-center">
+                  <div className="text-7xl font-bold tracking-tighter">
+                    {goal}
+                  </div>
+                  <div className="text-[0.70rem] uppercase text-muted-foreground">
+                    Calories/day
+                  </div>
+                </div>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-8 w-8 shrink-0 rounded-full"
+                  onClick={() => onClick(10)}
+                  disabled={goal >= 400}
+                >
+                  <Plus />
+                  <span className="sr-only">Increase</span>
+                </Button>
+              </div>
+              <div className="mt-3 h-[120px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={data}>
+                    <Bar
+                      dataKey="goal"
+                      style={
+                        {
+                          fill: "hsl(var(--foreground))",
+                          opacity: 0.9,
+                        } as React.CSSProperties
+                      }
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+            <DrawerFooter>
+              <Button>Submit</Button>
+              <DrawerClose asChild>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </div>
+
+          <DrawerFooter>
+            <DrawerClose asChild>
+              <Button variant="outline">Close</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
       {/* Sticky Navigation Bar */}
       <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
           <div className='hidden md:flex space-x-6'>
-            <a href='#' className='hover:text-gray-600'>Solutions</a>
             <a href='#' className='hover:text-gray-600'>Typeform</a>
             <a href='#contact' className='hover:text-gray-600'>Contact us</a>
           </div>
           <div className='flex space-x-4'>
-            <button className='bg-black text-white px-4 py-2 rounded'>Get started</button>
+            <Button
+              className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
+              onClick={() => setDrawerOpen(true)}
+            >
+              Click here
+            </Button>
           </div>
         </div>
       </nav>
@@ -116,8 +261,7 @@ export default function Home() {
           <div className='flex flex-col items-center space-y-4'>
             <Button
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
-              onClick={() => {
-              }}
+              onClick={() => setDrawerOpen(true)}
             >
               Click here
             </Button>
