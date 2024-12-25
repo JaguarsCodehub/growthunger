@@ -42,6 +42,7 @@ import {
 import StartupGame from '@/components/StartupGame';
 import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 import Feedback from '@/components/Feedback';
+import MinesGame from '@/components/MinesGame';
 
 const data = [
   {
@@ -149,74 +150,29 @@ export default function Home() {
       >
         Click here
       </Button> */}
-
       <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
-        <DrawerContent>
+        <DrawerContent className='bg-gray-900'>
           <div className='mx-auto w-full max-w-sm'>
             <DrawerHeader>
-              <DrawerTitle>Rate Goal</DrawerTitle>
-              <DrawerDescription>
-                Set your daily activity goal.
-              </DrawerDescription>
+              <DrawerTitle className='text-white text-2xl'>Play Mines</DrawerTitle>
+              {/* <DrawerDescription className='text-white'>
+                Just a fun element for all the users.
+              </DrawerDescription> */}
             </DrawerHeader>
-            <div className='p-4 pb-0'>
-              <div className='flex items-center justify-center space-x-2'>
-                <Button
-                  variant='outline'
-                  size='icon'
-                  className='h-8 w-8 shrink-0 rounded-full'
-                  onClick={() => onClick(-10)}
-                  disabled={goal <= 200}
-                >
-                  <Minus />
-                  <span className='sr-only'>Decrease</span>
-                </Button>
-                <div className='flex-1 text-center'>
-                  <div className='text-7xl font-bold tracking-tighter'>
-                    {goal}
-                  </div>
-                  <div className='text-[0.70rem] uppercase text-muted-foreground'>
-                    Calories/day
-                  </div>
-                </div>
-                <Button
-                  variant='outline'
-                  size='icon'
-                  className='h-8 w-8 shrink-0 rounded-full'
-                  onClick={() => onClick(10)}
-                  disabled={goal >= 400}
-                >
-                  <Plus />
-                  <span className='sr-only'>Increase</span>
-                </Button>
-              </div>
-              <div className='mt-3 h-[120px]'>
-                <ResponsiveContainer width='100%' height='100%'>
-                  <BarChart data={data}>
-                    <Bar
-                      dataKey='goal'
-                      style={
-                        {
-                          fill: 'hsl(var(--foreground))',
-                          opacity: 0.9,
-                        } as React.CSSProperties
-                      }
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
+            
+            {/* Mines Game Component */}
+            <MinesGame />
             <DrawerFooter>
-              <Button>Submit</Button>
+              <Button variant='outline'>Share Growthunger to your friends</Button>
               <DrawerClose asChild>
-                <Button variant='outline'>Cancel</Button>
+                <Button variant='destructive'>Cancel</Button>
               </DrawerClose>
             </DrawerFooter>
           </div>
         </DrawerContent>
       </Drawer>
-      {/* Sticky Navigation Bar */}
-      <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
+    {/* Sticky Navigation Bar */}
+      <nav className='md:mx-32 mx-4 mt-8 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
           <div className='hidden md:flex space-x-6'>
@@ -237,9 +193,8 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
       <GridBackground />
-
+      <GridBackground />
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
         <div className='absolute top-8 left-1/2 transform -translate-x-1/2'>
           {/* <h2 className='text-lg font-semibold text-black'>Growthunger™</h2> */}
@@ -280,7 +235,6 @@ export default function Home() {
           <TechStack />
         </div>
       </div>
-
       <Projects />
       <div className='min-h-screen py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
@@ -313,15 +267,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <AnimatedCards />
-
       <HowItWorks />
-
       <div id='contact' className='md:m-16 m-4'>
         <CTASection />
       </div>
-
       <footer className='bg-gray-300 text-white py-4'>
         <div className='max-w-7xl mx-auto text-center'>
           <p className='mb-2 text-black'>
