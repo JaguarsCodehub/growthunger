@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import React, { useEffect, useState } from 'react';
 import HowItWorks from '@/components/how-it-works';
@@ -131,7 +132,6 @@ const features = [
 export default function Home() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [goal, setGoal] = React.useState(350)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
 
   function onClick(adjustment: number) {
     setGoal(Math.max(200, Math.min(400, goal + adjustment)))
@@ -152,50 +152,52 @@ export default function Home() {
 
       <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
         <DrawerContent>
-          <div className="mx-auto w-full max-w-sm">
+          <div className='mx-auto w-full max-w-sm'>
             <DrawerHeader>
               <DrawerTitle>Rate Goal</DrawerTitle>
-              <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+              <DrawerDescription>
+                Set your daily activity goal.
+              </DrawerDescription>
             </DrawerHeader>
-            <div className="p-4 pb-0">
-              <div className="flex items-center justify-center space-x-2">
+            <div className='p-4 pb-0'>
+              <div className='flex items-center justify-center space-x-2'>
                 <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-8 w-8 shrink-0 rounded-full"
+                  variant='outline'
+                  size='icon'
+                  className='h-8 w-8 shrink-0 rounded-full'
                   onClick={() => onClick(-10)}
                   disabled={goal <= 200}
                 >
                   <Minus />
-                  <span className="sr-only">Decrease</span>
+                  <span className='sr-only'>Decrease</span>
                 </Button>
-                <div className="flex-1 text-center">
-                  <div className="text-7xl font-bold tracking-tighter">
+                <div className='flex-1 text-center'>
+                  <div className='text-7xl font-bold tracking-tighter'>
                     {goal}
                   </div>
-                  <div className="text-[0.70rem] uppercase text-muted-foreground">
+                  <div className='text-[0.70rem] uppercase text-muted-foreground'>
                     Calories/day
                   </div>
                 </div>
                 <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-8 w-8 shrink-0 rounded-full"
+                  variant='outline'
+                  size='icon'
+                  className='h-8 w-8 shrink-0 rounded-full'
                   onClick={() => onClick(10)}
                   disabled={goal >= 400}
                 >
                   <Plus />
-                  <span className="sr-only">Increase</span>
+                  <span className='sr-only'>Increase</span>
                 </Button>
               </div>
-              <div className="mt-3 h-[120px]">
-                <ResponsiveContainer width="100%" height="100%">
+              <div className='mt-3 h-[120px]'>
+                <ResponsiveContainer width='100%' height='100%'>
                   <BarChart data={data}>
                     <Bar
-                      dataKey="goal"
+                      dataKey='goal'
                       style={
                         {
-                          fill: "hsl(var(--foreground))",
+                          fill: 'hsl(var(--foreground))',
                           opacity: 0.9,
                         } as React.CSSProperties
                       }
@@ -207,32 +209,30 @@ export default function Home() {
             <DrawerFooter>
               <Button>Submit</Button>
               <DrawerClose asChild>
-                <Button variant="outline">Cancel</Button>
+                <Button variant='outline'>Cancel</Button>
               </DrawerClose>
             </DrawerFooter>
           </div>
-
-          <DrawerFooter>
-            <DrawerClose asChild>
-              <Button variant="outline">Close</Button>
-            </DrawerClose>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
       {/* Sticky Navigation Bar */}
       <nav className='m-4 mt-10 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
-          <img src='/images/logo.png' alt='logo' className='w-24 h-12' />
+          <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
           <div className='hidden md:flex space-x-6'>
-            <a href='#' className='hover:text-gray-600'>Typeform</a>
-            <a href='#contact' className='hover:text-gray-600'>Contact us</a>
+            <a href='#' className='hover:text-gray-600'>
+              Typeform
+            </a>
+            <a href='#contact' className='hover:text-gray-600'>
+              Contact us
+            </a>
           </div>
           <div className='flex space-x-4'>
             <Button
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
               onClick={() => setDrawerOpen(true)}
             >
-              Click here
+              Get Started
             </Button>
           </div>
         </div>
@@ -248,14 +248,17 @@ export default function Home() {
 
         <div className='z-40 max-w-4xl mx-auto text-center space-y-6'>
           <h1 className=' text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
-            We <span className='text-emerald-600'><FlipWords words={words} /></span>the tech;
+            We{' '}
+            <span className='text-emerald-600'>
+              <FlipWords words={words} />
+            </span>
+            the tech;
             <br />
-
             you drive the growth
           </h1>
 
           <p className='text-xl md:text-2xl text-black/90'>
-            See the people you follow talking about us !
+            Let's turn your vision into a world-class product
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
@@ -321,11 +324,19 @@ export default function Home() {
 
       <footer className='bg-gray-300 text-white py-4'>
         <div className='max-w-7xl mx-auto text-center'>
-          <p className='mb-2 text-black'>© 2024 Growthunger. All rights reserved.</p>
+          <p className='mb-2 text-black'>
+            © 2024 Growthunger. All rights reserved.
+          </p>
           <div className='space-x-4'>
-            <a href='/about' className='hover:underline text-black'>Instagram</a>
-            <a href='/services' className='hover:underline text-black'>LinkedIn</a>
-            <a href='/contact' className='hover:underline text-black'>Github</a>
+            <a href='/about' className='hover:underline text-black'>
+              Instagram
+            </a>
+            <a href='/services' className='hover:underline text-black'>
+              LinkedIn
+            </a>
+            <a href='/contact' className='hover:underline text-black'>
+              Github
+            </a>
           </div>
         </div>
       </footer>

@@ -30,7 +30,7 @@ const NotificationsList: React.FC = () => {
         const clearAllTimeout = setTimeout(() => {
             setActiveNotification(null);
             clearInterval(intervalId);
-        }, 15000);
+        }, 20000);
 
         return () => {
             clearInterval(intervalId);
