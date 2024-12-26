@@ -39,7 +39,7 @@ const NotificationsList: React.FC = () => {
     }, []);
 
     return (
-        <div className="fixed top-36 right-8 space-y-3 z-50">
+        <div className="fixed top-36 right-8 space-y-3 z-40">
             {activeNotification && (
                 <NotificationCard
                     className="fade-in-out"

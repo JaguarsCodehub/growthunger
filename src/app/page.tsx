@@ -43,7 +43,55 @@ import StartupGame from '@/components/StartupGame';
 import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 import Feedback from '@/components/Feedback';
 import MinesGame from '@/components/MinesGame';
+import { FloatingDock } from '@/components/ui/floating-dock';
+import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2 } from '@tabler/icons-react';
 
+const links = [
+  {
+    title: 'Home',
+    icon: (
+      <IconHome className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+
+  {
+    title: 'Products',
+    icon: (
+      <IconTerminal2 className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Components',
+    icon: (
+      <IconNewSection className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Changelog',
+    icon: (
+      <IconExchange className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+
+  {
+    title: 'Twitter',
+    icon: (
+      <IconBrandX className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'GitHub',
+    icon: (
+      <IconBrandGithub className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+];
 const data = [
   {
     goal: 400,
@@ -144,26 +192,24 @@ export default function Home() {
   return (
     <div className='min-h-screen bg-gray-100'>
       {/* Drawer */}
-      {/* <Button
-        className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
-        onClick={() => setDrawerOpen(true)}
-      >
-        Click here
-      </Button> */}
       <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
         <DrawerContent className='bg-gray-900'>
           <div className='mx-auto w-full max-w-sm'>
             <DrawerHeader>
-              <DrawerTitle className='text-white text-2xl'>Play Mines</DrawerTitle>
+              <DrawerTitle className='text-white text-2xl'>
+                Play Mines
+              </DrawerTitle>
               {/* <DrawerDescription className='text-white'>
                 Just a fun element for all the users.
               </DrawerDescription> */}
             </DrawerHeader>
-            
+
             {/* Mines Game Component */}
             <MinesGame />
             <DrawerFooter>
-              <Button variant='outline'>Share Growthunger to your friends</Button>
+              <Button variant='outline'>
+                Share Growthunger to your friends
+              </Button>
               <DrawerClose asChild>
                 <Button variant='destructive'>Cancel</Button>
               </DrawerClose>
@@ -171,7 +217,13 @@ export default function Home() {
           </div>
         </DrawerContent>
       </Drawer>
-    {/* Sticky Navigation Bar */}
+      {/* Sticky Navigation Bar */}
+      {/* <div className='z-50 flex items-center w-full'>
+        <FloatingDock
+          mobileClassName='translate-y-20' // only for demo, remove for production
+          items={links}
+        />
+      </div> */}
       <nav className='md:mx-32 mx-4 mt-8 sticky top-0 bg-white shadow-2xl z-50 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
@@ -221,7 +273,7 @@ export default function Home() {
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
               onClick={() => setDrawerOpen(true)}
             >
-              Click here
+              Bet your luck on us
             </Button>
 
             <div className='flex items-center space-x-2'>

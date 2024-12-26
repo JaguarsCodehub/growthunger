@@ -21,7 +21,7 @@ const MinesGame: React.FC = () => {
       }));
 
     const bombIndices: number[] = [];
-    while (bombIndices.length < 2) {
+    while (bombIndices.length < 1) {
       const randomIndex = Math.floor(Math.random() * 9);
       if (!bombIndices.includes(randomIndex)) {
         bombIndices.push(randomIndex);
