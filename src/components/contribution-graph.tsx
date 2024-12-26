@@ -20,7 +20,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        'bg-white p-6 rounded-2xl flex flex-col items-center text-center relative border border-gray-300',
+        'bg-white p-6 rounded-2xl flex flex-col items-center text-center relative border border-rose-300',
         'hover:shadow-lg transition-all duration-300',
         className
       )}
@@ -35,7 +35,7 @@ const FeatureCard = ({
 
       {isHovered ? (
         <div className='animate-in fade-in-30'>
-          <h3 className='font-bold text-sm mt-6'>{title}</h3>
+          <h3 className='font-bold text-lg mt-6'>{title}</h3>
           <p className='text-gray-600 text-sm'>{description}</p>
         </div>
       ) : (

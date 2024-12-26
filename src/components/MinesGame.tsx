@@ -66,7 +66,7 @@ const MinesGame: React.FC = () => {
     <div className='bg-gray-900 mx-16 text-white'>
       <div className='mb-6 text-center'>
         <label className='mb-2 block text-base font-semibold'>
-          Set Your Bet: ₹{bet}
+          Set Your Bet on Growthunger: ₹{bet}
         </label>
         <input
           type='range'
@@ -91,13 +91,12 @@ const MinesGame: React.FC = () => {
           <button
             key={index}
             onClick={() => handleClick(index)}
-            className={`flex h-20 w-20 items-center justify-center rounded-lg ${
-              tile.revealed
-                ? tile.type === 'bomb'
-                  ? 'bg-black text-white'
-                  : 'bg-green-300 text-black'
-                : 'bg-gray-800 hover:bg-gray-700'
-            }`}
+            className={`flex h-20 w-20 items-center justify-center rounded-lg ${tile.revealed
+              ? tile.type === 'bomb'
+                ? 'bg-black text-white'
+                : 'bg-green-300 text-black'
+              : 'bg-gray-800 hover:bg-gray-700'
+              }`}
           >
             {tile.revealed ? (
               tile.type === 'bomb' ? (
@@ -116,11 +115,21 @@ const MinesGame: React.FC = () => {
         ))}
       </div>
 
-      {message && (
-        <div className='mt-6 rounded-lg bg-gray-800 p-2 text-center'>
+      {message === 'Game Over! You hit a bomb.' ? (
+        <div className='mt-6 rounded-lg bg-red-500 p-2 text-center'>
+          {message}
+        </div>
+      ) : (
+        <div className='mt-6 rounded-lg bg-green-500 p-2 text-center'>
           {message}
         </div>
       )}
+
+      {/* {message == 'Game Over! You hit a bomb.' && (
+        <div className='mt-6 rounded-lg bg-gray-800 p-2 text-center'>
+          {message}
+        </div>
+      )} */}
     </div>
   );
 };
