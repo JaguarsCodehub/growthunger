@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Globe, Mail } from 'lucide-react';
+import { ArrowUpRight, Globe, Mail, PhoneCallIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const Projects = () => {
@@ -48,7 +48,7 @@ const Projects = () => {
           now 🌐
         </h2>
         <Button variant='outline' className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'>
-          Let's connect right now <Mail className='ml-2' />
+          Let's hop on a discovery call after this <PhoneCallIcon className='ml-2' />
         </Button>
       </div>
 
@@ -58,7 +58,7 @@ const Projects = () => {
             <TabsTrigger
               key={project.id}
               value={project.id}
-              className={`rounded-full px-6 py-2 text-sm data-[state=active]:bg-black data-[state=active]:text-white text-black`}
+              className={`rounded-full px-6 py-2 text-sm data-[state=active]:bg-black data-[state=inactive]:bg-gray-300 data-[state=active]:text-white text-black`}
             >
               {project.name}
             </TabsTrigger>

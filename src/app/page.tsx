@@ -22,6 +22,8 @@ import {
   Minus,
   Mail,
   ArrowBigDown,
+  ArrowLeftFromLine,
+  ArrowLeft,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -277,7 +279,7 @@ export default function Home() {
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
               onClick={() => setDrawerOpen(true)}
             >
-              Bet your luck on us
+              Bet your luck on us <span><ArrowLeft className='text-emerald-400' /></span> Click Here
             </Button>
 
             <div className='flex items-center space-x-2'>

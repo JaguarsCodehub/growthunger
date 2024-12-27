@@ -20,7 +20,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        'bg-white p-6 rounded-2xl flex flex-col items-center text-center relative border border-rose-300',
+        'bg-white p-6 rounded-2xl flex flex-col items-center text-center relative border border-gray-300',
         'hover:shadow-lg transition-all duration-300',
         className
       )}

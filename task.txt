@@ -1,3 +1,12 @@
+Tasks:
+
+- Integrate Calendly
+- Crop out the Memes
+- Add a Fill Form button
+
+
+
+
 - Create an engaging CTA
 - INtegrate the useEffect Notifications (Alex Hormozi talking about Growthunger)
 - Integrate Memes
