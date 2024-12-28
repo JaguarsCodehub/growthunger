@@ -244,7 +244,7 @@ export default function Home() {
           <div className='flex space-x-4'>
             <Button
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
-            // onClick={() => setDrawerOpen(true)}
+              // onClick={() => setDrawerOpen(true)}
             >
               Get Started
             </Button>
@@ -252,7 +252,7 @@ export default function Home() {
         </div>
       </nav>
       <GridBackground />
-      {/* <GridBackground /> */}
+      <GridBackground />
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
         <div className='absolute top-8 left-1/2 transform -translate-x-1/2'>
           {/* <h2 className='text-lg font-semibold text-black'>Growthunger™</h2> */}
@@ -279,7 +279,11 @@ export default function Home() {
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
               onClick={() => setDrawerOpen(true)}
             >
-              Bet your luck on us <span><ArrowLeft className='text-emerald-400' /></span> Click Here
+              Bet your luck on us{' '}
+              <span>
+                <ArrowLeft className='text-emerald-400' />
+              </span>{' '}
+              Click Here
             </Button>
 
             <div className='flex items-center space-x-2'>
@@ -294,13 +298,8 @@ export default function Home() {
         </div>
       </div>
       <Projects />
-      <div className="flex flex-col min-h-screen px-4 sm:px-6 lg:px-8 items-center justify-center">
-        <Image
-          src='/images/meme1.jpeg'
-          alt='Meme1'
-          width={1000}
-          height={400}
-        />
+      <div className='flex flex-col min-h-screen px-4 sm:px-6 lg:px-8 items-center justify-center'>
+        <Image src='/images/meme1.jpeg' alt='Meme1' width={1000} height={400} />
         <Image
           src='/images/meme2.jpeg'
           alt='Meme1'
@@ -309,23 +308,29 @@ export default function Home() {
           className='mt-4'
         />
       </div>
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="max-w-7xl mx-auto">
+      <div className='min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-12'>
+        <div className='max-w-7xl mx-auto'>
           <div className='text-center mb-16 space-y-4'>
             <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
-              Even our<span className='text-red-600 px-2 font-bold'>spidey knows</span>
+              Even our
+              <span className='text-red-600 px-2 font-bold'>spidey knows</span>
               <br />
               when to call for help
             </h2>
-            <h4 className='text-xl md:text-3xl font-medium tracking-tight text-black'>What's stopping you ?</h4>
-            <Button variant='outline' className='bg-red-600 border border-red-700 rounded-full text-white mt-8'>
+            <h4 className='text-xl md:text-3xl font-medium tracking-tight text-black'>
+              What's stopping you ?
+            </h4>
+            <Button
+              variant='outline'
+              className='bg-red-600 border border-red-700 rounded-full text-white mt-8'
+            >
               See what we expertise into below <ArrowBigDown className='ml-2' />
             </Button>
           </div>
 
-          <div className="relative">
+          <div className='relative'>
             {/* Grid Container */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10 group">
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10 group'>
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}
@@ -337,27 +342,27 @@ export default function Home() {
             </div>
 
             {/* Decorative Grid Lines */}
-            <div className="absolute inset-0 pointer-events-none">
+            <div className='absolute inset-0 pointer-events-none'>
               {/* Horizontal Lines */}
-              <div className="absolute inset-x-0 top-1/4 h-[1px] bg-gray-300"></div>
-              <div className="absolute inset-x-0 top-1/2 h-[1px] bg-gray-300"></div>
-              <div className="absolute inset-x-0 top-3/4 h-[1px] bg-gray-300"></div>
+              <div className='absolute inset-x-0 top-1/4 h-[1px] bg-gray-300'></div>
+              <div className='absolute inset-x-0 top-1/2 h-[1px] bg-gray-300'></div>
+              <div className='absolute inset-x-0 top-3/4 h-[1px] bg-gray-300'></div>
 
               {/* Vertical Lines */}
-              <div className="absolute inset-y-0 left-1/4 w-[1px] bg-gray-300"></div>
-              <div className="absolute inset-y-0 left-1/2 w-[1px] bg-gray-300"></div>
-              <div className="absolute inset-y-0 left-3/4 w-[1px] bg-gray-300"></div>
+              <div className='absolute inset-y-0 left-1/4 w-[1px] bg-gray-300'></div>
+              <div className='absolute inset-y-0 left-1/2 w-[1px] bg-gray-300'></div>
+              <div className='absolute inset-y-0 left-3/4 w-[1px] bg-gray-300'></div>
 
               {/* Plus Icons */}
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/4 left-3/4 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-3/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <Plus className="absolute w-6 h-6 text-gray-500 top-3/4 left-3/4 -translate-x-1/2 -translate-y-1/2" />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/4 left-3/4 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-3/4 left-1/4 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+              <Plus className='absolute w-6 h-6 text-gray-400 top-3/4 left-3/4 -translate-x-1/2 -translate-y-1/2' />
             </div>
           </div>
         </div>
@@ -369,19 +374,14 @@ export default function Home() {
         <CTASection />
       </div>
 
-      <div className="flex flex-col md:flex-row px-4 sm:px-6 lg:px-8 items-center md:justify-evenly">
-        <Image
-          src='/images/meme3.jpeg'
-          alt='Meme1'
-          width={600}
-          height={200}
-        />
+      <div className='flex flex-col md:flex-row px-4 sm:px-6 lg:px-8 items-center md:justify-evenly'>
+        <Image src='/images/meme3.jpeg' alt='Meme1' width={600} height={200} />
         <Image
           src='/images/meme4.jpeg'
           alt='Meme1'
           width={500}
           height={120}
-        // className='mt-4'
+          // className='mt-4'
         />
       </div>
 

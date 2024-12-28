@@ -20,7 +20,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        'bg-white p-6 rounded-2xl flex flex-col items-center text-center relative border border-gray-300',
+        'bg-slate-200 p-6 rounded-2xl flex flex-col items-center text-center relative border border-gray-400',
         'hover:shadow-lg transition-all duration-300',
         className
       )}
@@ -28,7 +28,7 @@ const FeatureCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {!isHovered && (
-        <div className='bg-gray-100 p-4 rounded-md border border-gray-300'>
+        <div className='bg-slate-300 p-4 rounded-md border border-gray-500'>
           <Icon className='w-6 h-6 text-gray-800' />
         </div>
       )}
