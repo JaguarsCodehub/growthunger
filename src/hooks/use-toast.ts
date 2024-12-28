@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import * as React from "react"
@@ -140,9 +141,8 @@ function dispatch(action: Action) {
   })
 }
 
-type Toast = Omit<ToasterToast, "id">
 
-function toast({ title, description, icon, ...props }: { title: string; description: string; icon?: React.ReactNode; }) {
+function toast({ title, description, icon,  }: { title: string; description: string; icon?: React.ReactNode; }) {
   const id = genId()
 
   const update = (props: ToasterToast) =>

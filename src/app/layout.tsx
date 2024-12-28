@@ -5,8 +5,8 @@ import { Montserrat } from 'next/font/google'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Growthunger - A design agency with a twist',
-  description: 'Design subscriptions for everyone. Pause or cancel anytime.',
+  title: 'Growthunger - We evolve design with tech',
+  description: 'Our craft speaks for itself.',
 };
 
 export default function RootLayout({

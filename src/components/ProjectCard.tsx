@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 interface ProjectCardProps {
@@ -15,7 +15,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, imageUrl, technologies, index }: ProjectCardProps) {
-    const [isHovered, setIsHovered] = useState(false)
+    const [isHovered] = useState(false)
 
     const isEven = index % 2 === 0
 
