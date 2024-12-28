@@ -1,7 +1,6 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import GridBackground from "./ui/grid-background"
 
 export default function AnimatedCards() {
     const cards = [

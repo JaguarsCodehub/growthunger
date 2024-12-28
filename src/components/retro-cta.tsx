@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Twitter, Instagram } from 'lucide-react'
 import GridBackground from './ui/grid-background'
 

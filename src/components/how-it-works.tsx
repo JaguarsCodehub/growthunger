@@ -1,4 +1,4 @@
-import { ArrowUpRight, Globe } from 'lucide-react';
+import {  Globe } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function HowItWorks() {

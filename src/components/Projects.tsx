@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Globe, Mail, PhoneCallIcon } from 'lucide-react';
+import {  PhoneCallIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const Projects = () => {

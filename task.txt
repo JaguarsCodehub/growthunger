@@ -1,8 +1,8 @@
 Tasks:
 
-- Integrate Calendly
+- Integrate Calendly -- Done
 - Crop out the Memes
-- Add a Fill Form button
+- Add a Fill Form button -- Done
 
 
 

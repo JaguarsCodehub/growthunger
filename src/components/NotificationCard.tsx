@@ -8,7 +8,7 @@ interface NotificationCardProps {
     index: number;
 }
 
-const NotificationCard: React.FC<NotificationCardProps> = ({ notification, className, index }) => {
+const NotificationCard: React.FC<NotificationCardProps> = ({ notification }) => {
     const { avatar, title, message, timestamp } = notification;
 
     // const animationClass = index === 0 ? 'fade-in' : index === notifications.length - 1 ? 'fade-out' : 'fade-out';

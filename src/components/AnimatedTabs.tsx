@@ -10,7 +10,7 @@ export function TabsDemo() {
             value: 'Chess',
             content: (
                 <div className='relative flex w-full overflow-x-scroll bg-editor-800 rounded-b-md shadow-2xl shadow-slate-400'>
-                    <Image src={require('../assets/images/chess.png')} alt='Netflix' />
+                    <Image src='/images/chess.png' alt='Netflix' />
                 </div>
             ),
         },
@@ -19,7 +19,7 @@ export function TabsDemo() {
             value: 'Scalable Chat App',
             content: (
                 <div className='relative flex w-full overflow-x-scroll bg-editor-800 rounded-b-md shadow-2xl shadow-slate-400'>
-                    <Image src={require('../assets/images/1.png')} alt='Netflix' />
+                    <Image src='/images/1.png' alt='Netflix' />
                 </div>
             ),
         },
@@ -29,7 +29,7 @@ export function TabsDemo() {
             content: (
                 <div className='relative flex w-full overflow-x-scroll bg-editor-800 rounded-b-md shadow-2xl shadow-slate-400'>
                     <Image
-                        src={require('../assets/images/vercel-deploy.png')}
+                        src='/images/vercel-deploy.png'
                         alt='Netflix'
                     />
                 </div>
@@ -41,7 +41,7 @@ export function TabsDemo() {
             content: (
                 <div className='relative flex w-full overflow-x-scroll bg-editor-800 rounded-b-md shadow-2xl shadow-slate-400'>
                     <Image
-                        src={require('../assets/images/socket-3d-game.png')}
+                        src='/images/socket-3d-game.png.'
                         alt='Netflix'
                     />
                 </div>
@@ -52,7 +52,7 @@ export function TabsDemo() {
             value: 'Community Platform',
             content: (
                 <div className='relative flex w-full overflow-x-scroll bg-editor-800 rounded-b-md shadow-2xl shadow-slate-400'>
-                    <Image src={require('../assets/images/discord.png')} alt='Netflix' />
+                    <Image src='/images/discord.png' alt='Netflix' />
                 </div>
             ),
         },

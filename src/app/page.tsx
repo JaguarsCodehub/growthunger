@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import React, { useEffect, useState } from 'react';
@@ -24,6 +25,7 @@ import {
   ArrowBigDown,
   ArrowLeftFromLine,
   ArrowLeft,
+  PhoneCallIcon,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -43,7 +45,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import StartupGame from '@/components/StartupGame';
 import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 import Feedback from '@/components/Feedback';
 import MinesGame from '@/components/MinesGame';
@@ -240,11 +241,22 @@ export default function Home() {
             <a href='#contact' className='hover:text-gray-600'>
               Contact us
             </a>
+            <a
+              href='https://calendly.com/thegrowthhunger/30min'
+              className='hover:text-gray-600'
+            >
+              Book a Call
+            </a>
           </div>
           <div className='flex space-x-4'>
             <Button
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
-              // onClick={() => setDrawerOpen(true)}
+              onClick={() =>
+                window.open(
+                  'https://calendly.com/thegrowthhunger/30min',
+                  '_blank'
+                )
+              }
             >
               Get Started
             </Button>
@@ -383,6 +395,26 @@ export default function Home() {
           height={120}
           // className='mt-4'
         />
+      </div>
+
+      <div className='text-center mb-16 mt-16 space-y-8'>
+        <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
+          Book a <span className='inline-block'>15 min</span>
+          <br />
+          <span className='text-green-600 px-2 font-bold'>
+            discovery call
+          </span>{' '}
+          with us
+        </h2>
+        <Button
+          onClick={() =>
+            window.open('https://calendly.com/thegrowthhunger/30min', '_blank')
+          }
+          variant='outline'
+          className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'
+        >
+          Let's build together <PhoneCallIcon className='ml-2' />
+        </Button>
       </div>
 
       <footer className='bg-gray-300 text-white py-4'>
