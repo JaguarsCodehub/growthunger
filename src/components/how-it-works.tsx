@@ -6,7 +6,7 @@ export default function HowItWorks() {
     <div className='py-8 mt-16'>
       {/* Section Title */}
       <div className='text-center mb-16 space-y-4'>
-        <h2 className='text-4xl md:text-7xl font-bold tracking-tight text-black'>
+        <h2 className='text-3xl md:text-7xl font-bold tracking-tight text-black'>
           We are engineers
           <br />
           <span className='text-green-600 py-0 font-bold'>
@@ -14,7 +14,7 @@ export default function HowItWorks() {
           </span>{' '}
           era 🍂
         </h2>
-        <h2 className='text-xl md:text-2xl font-medium tracking-tight text-black'>
+        <h2 className='text-lg md:text-2xl font-medium tracking-tight text-black'>
           We sketch. We build. We deploy like God in a Box
         </h2>
 

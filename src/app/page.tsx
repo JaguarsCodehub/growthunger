@@ -231,7 +231,7 @@ export default function Home() {
           items={links}
         />
       </div> */}
-      <nav className='md:mx-32 mx-4 mt-8 sticky top-0 bg-white shadow-2xl z-40 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
+      <nav className='md:mx-32 mx-4 mt-8 top-0 bg-white shadow-2xl z-40 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
           <div className='hidden md:flex space-x-6'>
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
       </nav>
       <GridBackground />
-      <GridBackground />
+      {/* <GridBackground /> */}
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
         <div className='absolute top-8 left-1/2 transform -translate-x-1/2'>
           {/* <h2 className='text-lg font-semibold text-black'>Growthunger™</h2> */}
@@ -398,7 +398,7 @@ export default function Home() {
       </div>
 
       <div className='text-center mb-16 mt-16 space-y-8'>
-        <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
+        <h2 className='text-3xl md:text-6xl font-bold tracking-tight text-black'>
           Book a <span className='inline-block'>15 min</span>
           <br />
           <span className='text-green-600 px-2 font-bold'>
