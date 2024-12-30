@@ -1,4 +1,4 @@
-import {  Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function HowItWorks() {
@@ -15,7 +15,7 @@ export default function HowItWorks() {
           era 🍂
         </h2>
         <h2 className='text-lg md:text-2xl font-medium tracking-tight text-black'>
-          We sketch. We build. We deploy like God in a Box
+          we deliver game-changing tech—flawlessly, every time
         </h2>
 
         <Button variant='default' className='bg-green-400 text-black rounded-full border border-black mt-8'>

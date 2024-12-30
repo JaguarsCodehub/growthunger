@@ -1,14 +1,51 @@
-Tasks:
+Offers:
+    - Launch in 30 Days Package (For Startups)
+        - Fully functional MVP ready for launch.
+        - A free roadmap to scale the MVP to a full product.
+        - 1 week of post-launch bug fixing.
+        - Free pitch deck template for raising funds.
+    Guarantee: If we don’t deliver in 30 days, you get 50% off.
 
-- Integrate Calendly -- Done
-- Crop out the Memes
-- Add a Fill Form button -- Done
+    - "Zero to App Store" Mobile App Package
+        - Cross-platform app (iOS and Android) from idea to deployment.
+        - A marketing plan for your first 1,000 downloads.
+        - 1-month free maintenance.
+    - Guarantee: No Questions Asked Refund
 
+    - "The 1-Week Business Booster" Package
+        - A complete, one-page, high-converting website for your business.
+        - $200 branding kit for completely free (logos, colors, fonts).
+        - $150 marketing plan for your initial leads for completely free.
 
+    - Guarantee: If the site doesn’t generate at least 5 new leads in the first 30 days, we’ll redesign it for free.
 
+    - "AI-in-a-Day" Sprint
+        - AI-powered feature added to your existing app or website (e.g., chatbots, predictive analytics, or recommendation engine).
+        - Free brainstorming session on how AI can boost your business.
+        - A roadmap for scaling AI features in the next 6 months.
+    - Guarantee: If you don’t see immediate results (e.g., faster support response, higher engagement), we’ll optimize it for free.
 
-- Create an engaging CTA
-- INtegrate the useEffect Notifications (Alex Hormozi talking about Growthunger)
-- Integrate Memes
-- Start creating offers
-- Get a landing page template for a tech agency website
+    - "LaunchPad Lite" for Non-Tech Founders
+        -  Build your idea into a clickable prototype, perfect for pitching.
+        -  2 weeks or less.
+        -  Free investor pitch deck.
+        -  A detailed roadmap for turning the prototype into a full product.
+
+    - Start Today, Launch Tomorrow
+        - Your business idea transformed into a functional prototype in 48 hours.
+        - Includes core user flows, responsive design, and real-time features.
+        - $1,000 worth of rapid user testing and feedback reports—FREE.
+        - A detailed $500 tech roadmap for scaling included at no extra cost.
+        - Risk-On-Me: If you’re not satisfied with the prototype, we refund you 100%.
+
+    - “AI in a Week”
+        - End-to-end integration of a custom AI feature in your app or site (e.g., chatbots, AI search).
+        - Fully trained models or fine-tuned prebuilt models included.
+        - $500 worth of AI use-case consultation FREE.
+
+    - “The Million-Dollar Pitch Deck”
+        - A pitch deck designed to raise funds or close deals—crafted by experts.
+        - Includes visuals, storytelling, and dynamic animations.
+        - $200 worth of product demo videos for free.
+        - A free $500 consultation session on pitching techniques.
+        - Pitch-ready app screens (value: $800) for FREE.

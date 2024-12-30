@@ -44,8 +44,8 @@ export default function AnimatedCards() {
 
     return (
         <div className="hidden md:block w-full max-w-3xl md:max-w-2xl mx-auto px-4 py-8 relative">
-            <h1 className="text-4xl font-bold text-center">Tech Stack that Builds</h1>
-            <h2 className="text-5xl font-bold text-center mb-16 text-blue-500">Future-Ready Solutions.</h2>
+            <h1 className="text-4xl font-bold text-center">Future-ready tech built with</h1>
+            <h2 className="text-5xl font-bold text-center mb-16 text-blue-500">modern stack designed to scale your vision.</h2>
             <div className="relative h-[300px] flex items-center justify-center">
                 {cards.map((card, index) => (
                     <Card

@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 'use client'
 import React, { useEffect, useState } from 'react';
 import HowItWorks from '@/components/how-it-works';
@@ -52,6 +51,8 @@ import { FloatingDock } from '@/components/ui/floating-dock';
 import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2 } from '@tabler/icons-react';
 import { Solutions } from '@/components/Solutions';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import NotificationsList from '@/components/NotificationsList';
 
 const links = [
   {
@@ -187,7 +188,9 @@ const features = [
 
 export default function Home() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [goal, setGoal] = React.useState(350)
+  const [goal, setGoal] = React.useState(350);
+
+  const router = useRouter()
 
   function onClick(adjustment: number) {
     setGoal(Math.max(200, Math.min(400, goal + adjustment)))
@@ -198,6 +201,7 @@ export default function Home() {
 
   return (
     <div className='min-h-screen bg-gray-100'>
+      <NotificationsList />
       {/* Drawer */}
       <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
         <DrawerContent className='bg-gray-900'>
@@ -231,7 +235,7 @@ export default function Home() {
           items={links}
         />
       </div> */}
-      <nav className='md:mx-32 mx-4 mt-8 top-0 bg-white shadow-2xl z-40 rounded-2xl border border-gray-400 backdrop-blur-2xl'>
+      {/* <nav className='md:mx-32 mx-4top-0 sticky  z-40 rounded-2xl'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
           <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
           <div className='hidden md:flex space-x-6'>
@@ -247,22 +251,18 @@ export default function Home() {
             >
               Book a Call
             </a>
+
           </div>
           <div className='flex space-x-4'>
             <Button
-              className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
-              onClick={() =>
-                window.open(
-                  'https://calendly.com/thegrowthhunger/30min',
-                  '_blank'
-                )
-              }
+              className='z-50 cursor-pointer px-12 py-2  text-base font-semibold animate-pulse text-white bg-red-500 rounded-md hover:bg-black/90'
+              onClick={() => router.push('/offers')}
             >
-              Get Started
+              $1,000 Worth of Value
             </Button>
           </div>
         </div>
-      </nav>
+      </nav> */}
       <GridBackground />
       {/* <GridBackground /> */}
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
@@ -283,11 +283,11 @@ export default function Home() {
           </h1>
 
           <p className='text-xl md:text-2xl text-black/90'>
-            Let's turn your vision into a world-class product
+            Let’s transform your vision into a world-class product faster than you thought possible.
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
-            <Button
+            {/* <Button
               className='z-50 cursor-pointer px-12 py-2 text-base font-normal text-white bg-black rounded-full hover:bg-black/90'
               onClick={() => setDrawerOpen(true)}
             >
@@ -296,12 +296,22 @@ export default function Home() {
                 <ArrowLeft className='text-emerald-400' />
               </span>{' '}
               Click Here
-            </Button>
+            </Button> */}
 
-            <div className='flex items-center space-x-2'>
+            <div className='flex space-x-4'>
+              <Image onClick={() => router.push('/offers')} src='/images/ticket-1.png' alt='ticket' width={200} height={50} className='hover:scale-125 transition duration-500 animate-pulse -rotate-12 cursor-pointer' />
+              {/* <Button
+                className='z-50 cursor-pointer px-12 py-2  text-base font-semibold text-orange-700 bg-yellow-500 rounded-full hover:bg-black/90'
+                onClick={() => router.push('/offers')}
+              >
+                $1,000 Worth of Value
+              </Button> */}
+            </div>
+
+            {/* <div className='flex items-center space-x-2'>
               <div className='w-2 h-2 bg-emerald-500 rounded-full'></div>
               <span className='text-sm text-black/90'>Available now</span>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -393,18 +403,15 @@ export default function Home() {
           alt='Meme1'
           width={500}
           height={120}
-          // className='mt-4'
+        // className='mt-4'
         />
       </div>
 
       <div className='text-center mb-16 mt-16 space-y-8'>
-        <h2 className='text-3xl md:text-6xl font-bold tracking-tight text-black'>
-          Book a <span className='inline-block'>15 min</span>
+        <h2 className='text-xl md:text-4xl font-bold tracking-tight text-black'>
+          Book a  <span className='inline-block'>free 15-minute discovery call today and </span>
           <br />
-          <span className='text-green-600 px-2 font-bold'>
-            discovery call
-          </span>{' '}
-          with us
+          see how fast we can bring your ideas to life.
         </h2>
         <Button
           onClick={() =>

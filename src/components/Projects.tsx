@@ -2,7 +2,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import {  PhoneCallIcon } from 'lucide-react';
+import { PhoneCallIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const Projects = () => {
@@ -41,15 +41,15 @@ const Projects = () => {
     <div className='w-full max-w-6xl mx-auto px-4 py-24'>
       <div className='text-center mb-16 space-y-8'>
         <h2 className='text-4xl md:text-6xl font-bold tracking-tight text-black'>
-          Checkout <span className='inline-block'>few of our</span>
+          Explore  <span className='inline-block'>our portfolio of</span>
           <br />
           <span className='text-green-600 px-2 font-bold'>
-            many projects
+            groundbreaking projects
           </span>{' '}
-          now 🌐
+          now
         </h2>
         <Button variant='outline' className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'>
-          Let's hop on a discovery call after this <PhoneCallIcon className='ml-2' />
+          Let’s hop on a discovery call to bring your idea to life. <PhoneCallIcon className='ml-2' />
         </Button>
       </div>
 
