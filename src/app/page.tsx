@@ -1,6 +1,6 @@
 
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import HowItWorks from '@/components/how-it-works';
 import Projects from '@/components/Projects';
 import TechStack from '@/components/tech-stack';
@@ -16,131 +16,76 @@ import {
   LayoutGrid,
   Settings2,
   Plus,
-  CheckCircle,
-  XCircle,
-  Info,
-  Minus,
-  Mail,
   ArrowBigDown,
-  ArrowLeftFromLine,
-  ArrowLeft,
+
   PhoneCallIcon,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
-import RetroCTA from '@/components/retro-cta';
 import CTASection from '@/components/cta-section';
-import { NavigationMenuDemo } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
 import { FlipWords } from '@/components/ui/flip-words';
-import { DrawerDemo } from '@/components/drawer-demo';
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Bar, BarChart, ResponsiveContainer } from 'recharts';
-import Feedback from '@/components/Feedback';
 import MinesGame from '@/components/MinesGame';
-import { FloatingDock } from '@/components/ui/floating-dock';
-import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2 } from '@tabler/icons-react';
-import { Solutions } from '@/components/Solutions';
+// import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2 } from '@tabler/icons-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import NotificationsList from '@/components/NotificationsList';
 
-const links = [
-  {
-    title: 'Home',
-    icon: (
-      <IconHome className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
+// const links = [
+//   {
+//     title: 'Home',
+//     icon: (
+//       <IconHome className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
 
-  {
-    title: 'Products',
-    icon: (
-      <IconTerminal2 className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
-  {
-    title: 'Components',
-    icon: (
-      <IconNewSection className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
-  {
-    title: 'Changelog',
-    icon: (
-      <IconExchange className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
+//   {
+//     title: 'Products',
+//     icon: (
+//       <IconTerminal2 className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
+//   {
+//     title: 'Components',
+//     icon: (
+//       <IconNewSection className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
+//   {
+//     title: 'Changelog',
+//     icon: (
+//       <IconExchange className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
 
-  {
-    title: 'Twitter',
-    icon: (
-      <IconBrandX className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
-  {
-    title: 'GitHub',
-    icon: (
-      <IconBrandGithub className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
-];
-const data = [
-  {
-    goal: 400,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 278,
-  },
-  {
-    goal: 189,
-  },
-  {
-    goal: 239,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 278,
-  },
-  {
-    goal: 189,
-  },
-  {
-    goal: 349,
-  },
-]
+//   {
+//     title: 'Twitter',
+//     icon: (
+//       <IconBrandX className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
+//   {
+//     title: 'GitHub',
+//     icon: (
+//       <IconBrandGithub className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+//     ),
+//     href: '#',
+//   },
+// ];
+
 
 const features = [
   {
@@ -188,13 +133,10 @@ const features = [
 
 export default function Home() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [goal, setGoal] = React.useState(350);
 
   const router = useRouter()
 
-  function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)))
-  }
+
 
   const words = ["build", "scale", "deploy", "design"];
 
@@ -282,7 +224,7 @@ export default function Home() {
             you drive the growth
           </h1>
 
-          <p className='text-xl md:text-2xl text-black/90'>
+          <p className='text-md md:text-xl text-black/90'>
             Let’s transform your vision into a world-class product faster than you thought possible.
           </p>
 
@@ -298,8 +240,8 @@ export default function Home() {
               Click Here
             </Button> */}
 
-            <div className='flex space-x-4'>
-              <Image onClick={() => router.push('/offers')} src='/images/ticket-1.png' alt='ticket' width={200} height={50} className='hover:scale-125 transition duration-500 animate-pulse -rotate-12 cursor-pointer' />
+            <div className='flex'>
+              <Image onClick={() => router.push('/offers')} src='/images/ticket-1.png' alt='ticket' width={180} height={80} className='hover:scale-125 transition duration-500 animate-pulse -rotate-12 cursor-pointer' />
               {/* <Button
                 className='z-50 cursor-pointer px-12 py-2  text-base font-semibold text-orange-700 bg-yellow-500 rounded-full hover:bg-black/90'
                 onClick={() => router.push('/offers')}
@@ -315,7 +257,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='absolute bottom-12 w-full max-w-5xl px-4'>
+        <div className='absolute bottom-8 w-full max-w-5xl px-4'>
           <TechStack />
         </div>
       </div>
@@ -340,7 +282,7 @@ export default function Home() {
               when to call for help
             </h2>
             <h4 className='text-xl md:text-3xl font-medium tracking-tight text-black'>
-              What's stopping you ?
+              Whats stopping you ?
             </h4>
             <Button
               variant='outline'
@@ -420,7 +362,7 @@ export default function Home() {
           variant='outline'
           className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'
         >
-          Let's build together <PhoneCallIcon className='ml-2' />
+          Lets build together <PhoneCallIcon className='ml-2' />
         </Button>
       </div>
 
