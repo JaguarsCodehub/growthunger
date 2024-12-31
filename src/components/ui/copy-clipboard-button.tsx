@@ -22,7 +22,7 @@ const CopyToClipboardButton: React.FC = () => {
       className='font-semibold mt-4 hover:bg-gray-300 bg-gray-200 border border-gray-700 border-dashed text-gray-900'
     >
       <Copy />
-      {copied ? 'Copied!' : 'Copy to Clipboard and share with your friends'}
+      {copied ? 'Copied!' : 'Copy and share with your friends'}
     </Button>
   );
 };
