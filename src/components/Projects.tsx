@@ -49,7 +49,7 @@ const Projects = () => {
           now
         </h2>
         <Button variant='outline' className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'>
-          Let’s hop on a discovery call to bring your idea to life. <PhoneCallIcon className='ml-2' />
+          Let’s hop on a discovery call. <PhoneCallIcon className='ml-2' />
         </Button>
       </div>
 

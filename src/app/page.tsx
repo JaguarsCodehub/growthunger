@@ -10,12 +10,12 @@ import {
   LayoutGrid,
   Plus,
   ArrowBigDown,
-  PhoneCallIcon,
-  Paperclip,
   Cloud,
   Box,
   NetworkIcon,
   FrameIcon,
+  FormInput,
+  VideoIcon,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -36,6 +36,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import NotificationsList from '@/components/NotificationsList';
 import { IconContract, IconDeviceLaptop, IconDeviceMobile } from '@tabler/icons-react';
+import MaxWidthWrapper from '@/components/max-width-wrapper';
 
 // const links = [
 //   {
@@ -168,43 +169,7 @@ export default function Home() {
           </div>
         </DrawerContent>
       </Drawer>
-      {/* Sticky Navigation Bar */}
-      {/* <div className='z-50 flex items-center w-full'>
-        <FloatingDock
-          mobileClassName='translate-y-20' // only for demo, remove for production
-          items={links}
-        />
-      </div> */}
-      {/* <nav className='md:mx-32 mx-4top-0 sticky  z-40 rounded-2xl'>
-        <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
-          <img src='/images/logo.png' alt='logo' className='w-24 h-12 z-50' />
-          <div className='hidden md:flex space-x-6'>
-            <a href='#' className='hover:text-gray-600'>
-              Typeform
-            </a>
-            <a href='#contact' className='hover:text-gray-600'>
-              Contact us
-            </a>
-            <a
-              href='https://calendly.com/thegrowthhunger/30min'
-              className='hover:text-gray-600'
-            >
-              Book a Call
-            </a>
-
-          </div>
-          <div className='flex space-x-4'>
-            <Button
-              className='z-50 cursor-pointer px-12 py-2  text-base font-semibold animate-pulse text-white bg-red-500 rounded-md hover:bg-black/90'
-              onClick={() => router.push('/offers')}
-            >
-              $1,000 Worth of Value
-            </Button>
-          </div>
-        </div>
-      </nav> */}
       <GridBackground />
-      {/* <GridBackground /> */}
       <div className='relative flex flex-col items-center justify-center min-h-screen px-4 py-20'>
         <div className='absolute top-8 left-1/2 transform -translate-x-1/2'>
           {/* <h2 className='text-lg font-semibold text-black'>Growthunger™</h2> */}
@@ -212,7 +177,7 @@ export default function Home() {
         </div>
 
         <div className='z-40 max-w-4xl mx-auto text-center space-y-6'>
-          <h1 className=' text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
+          <h1 className='text-3xl md:text-7xl font-extrabold leading-tight tracking-tight text-black'>
             We{' '}
             <span className='text-emerald-600'>
               <FlipWords words={words} />
@@ -223,7 +188,8 @@ export default function Home() {
           </h1>
 
           <p className='text-md md:text-xl text-black/90'>
-            Let’s transform your vision into a world-class product faster than you thought possible.
+            Let’s transform your vision into a world-class product faster than
+            you thought possible.
           </p>
 
           <div className='flex flex-col items-center space-y-4'>
@@ -239,7 +205,14 @@ export default function Home() {
             </Button> */}
 
             <div className='flex'>
-              <Image onClick={() => router.push('/offers')} src='/images/ticket-1.png' alt='ticket' width={180} height={80} className='hover:scale-125 transition duration-500 animate-pulse -rotate-12 cursor-pointer' />
+              <Image
+                onClick={() => router.push('/offers')}
+                src='/images/ticket-1.png'
+                alt='ticket'
+                width={180}
+                height={80}
+                className='hover:scale-125 transition duration-500 animate-pulse hover:-rotate-12 -rotate-6 cursor-pointer'
+              />
               {/* <Button
                 className='z-50 cursor-pointer px-12 py-2  text-base font-semibold text-orange-700 bg-yellow-500 rounded-full hover:bg-black/90'
                 onClick={() => router.push('/offers')}
@@ -343,34 +316,47 @@ export default function Home() {
           alt='Meme1'
           width={500}
           height={120}
-        // className='mt-4'
+          // className='mt-4'
         />
       </div>
 
-      <div className='text-center mb-16 mt-16 space-y-8'>
-        <h2 className='text-xl md:text-4xl font-bold tracking-tight text-black'>
-          Book a  <span className='inline-block'>free 15-minute discovery call today and </span>
-          <br />
-          see how fast we can bring your ideas to life.
-        </h2>
-        <Button
-          onClick={() =>
-            window.open('https://calendly.com/thegrowthhunger/30min', '_blank')
-          }
-          variant='outline'
-          className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'
-        >
-          Lets build together <PhoneCallIcon className='ml-2' />
-        </Button>
-        <Button
-          onClick={() => router.push('/offers')
-          }
-          variant='outline'
-          className='bg-yellow-400 border ml-6 border-yellow-700 rounded-full text-black mt-8 transition duration-150 fade-in-20 fade-out-20'
-        >
-          Go to our sales page <Paperclip className='ml-2' />
-        </Button>
-      </div>
+      <MaxWidthWrapper className='mt-12'>
+        <section className='px-6 py-10'>
+          <h2 className='text-2xl md:text-2xl mb-8 font-bold'>
+            Ready to bring your vision to life?
+          </h2>
+          <h2 className='text-xl md:text-2xl mb-8'>
+            Let’s make it happen. <br />
+            Book your{' '}
+            <strong className='bg-yellow-400 text-orange-700'>
+              free 15-minute discovery call
+            </strong>{' '}
+            now and see how we can turn your ideas into reality!{' '}
+          </h2>
+          <div className='flex flex-col md:flex-row gap-4'>
+            <Button
+              onClick={() =>
+                router.push('/offers')
+              }
+              className='border border-gray-400'
+              variant='outline'
+            >
+              Check my Sales Page <FormInput />
+            </Button>
+            <Button
+              onClick={() =>
+                window.open(
+                  'https://calendly.com/thegrowthhunger/30min',
+                  '_blank'
+                )
+              }
+              className=' font-semibold bg-yellow-400 text-orange-700 border hover:bg-yellow-600 hover:text-white'
+            >
+              Schedule a Discovery call <VideoIcon />
+            </Button>
+          </div>
+        </section>
+      </MaxWidthWrapper>
 
       <footer className='bg-gray-300 text-white py-4'>
         <div className='max-w-7xl mx-auto text-center'>

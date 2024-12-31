@@ -5,7 +5,7 @@ export default function HowItWorks() {
   return (
     <div className='py-8 mt-16'>
       {/* Section Title */}
-      <div className='text-center mb-16 space-y-4'>
+      <div className='text-center mb-16 space-y-4 mx-4'>
         <h2 className='text-3xl md:text-7xl font-bold tracking-tight text-black'>
           We are engineers
           <br />

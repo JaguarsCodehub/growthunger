@@ -234,8 +234,8 @@ export default function Offers() {
           </div>
         </MaxWidthWrapper>
 
-        <MaxWidthWrapper className='mt-12'>
-          <section className='max-w-4xl mx-auto px-6 py-8'>
+        <MaxWidthWrapper className='mt-12 px-2'>
+          <section className='max-w-4xl mx-auto py-8'>
             <h2 className='text-3xl font-bold text-center mb-6'>
               Why Work With Us?
             </h2>
@@ -276,7 +276,7 @@ export default function Offers() {
         </MaxWidthWrapper>
 
         <MaxWidthWrapper className='mt-12'>
-          <section className=' px-6 py-10'>
+          <section className=' px-2 py-10'>
             <h2 className='text-3xl md:text-4xl font-bold mb-8'>
               Here’s What Makes Us Different
             </h2>
@@ -329,8 +329,9 @@ export default function Offers() {
                 className='border border-gray-400'
                 variant='outline'
               >
-                Fill this 2 minute form (if not meeting) <FormInput />
+                Fill this 2 minute form <FormInput />
               </Button>
+              OR
               <Button
                 onClick={() =>
                   window.open(
@@ -338,7 +339,7 @@ export default function Offers() {
                     '_blank'
                   )
                 }
-                className=' font-semibold bg-yellow-400 text-orange-700 border hover:bg-yellow-600 hover:text-white'
+                className=' font-semibold bg-black border hover:bg-blue-600 transition duration-500 animate-pulse hover:rotate-1 -rotate-6 hover:text-white '
               >
                 Schedule a Discovery call <VideoIcon />
               </Button>
@@ -357,12 +358,12 @@ export default function Offers() {
           </section>
         </MaxWidthWrapper>
 
-        <div className='py-10 justify-center items-center mx-12'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2'>
+        <div className='py-10 flex justify-center items-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2'>
             {offers.map((offer, index) => (
               <Card
                 key={index}
-                className='shadow-lg hover:shadow-xl transition duration-200 border border-gray-600'
+                className='w-full sm:w-[280px] md:w-[450px] shadow-lg hover:shadow-xl transition duration-200 border border-gray-600'
               >
                 <CardHeader>
                   <CardTitle className='text-2xl text-gray-800'>
@@ -423,8 +424,9 @@ export default function Offers() {
                 className='border border-gray-400'
                 variant='outline'
               >
-                Fill this 2 minute form (if not meeting) <FormInput />
+                Fill this 2 minute form <FormInput />
               </Button>
+              OR
               <Button
                 onClick={() =>
                   window.open(
@@ -432,7 +434,7 @@ export default function Offers() {
                     '_blank'
                   )
                 }
-                className=' font-semibold'
+                className=' font-semibold bg-black border hover:bg-blue-600 transition duration-500 animate-pulse hover:rotate-1 -rotate-6 hover:text-white '
               >
                 Schedule a Discovery call <VideoIcon />
               </Button>
