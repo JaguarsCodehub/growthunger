@@ -7,6 +7,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper";
 import { IconArrowNarrowDown } from "@tabler/icons-react";
 import { FormInput, VideoIcon } from 'lucide-react';
 import PdfRequestForm from '@/components/pdf-form';
+import CopyToClipboardButton from '@/components/ui/copy-clipboard-button';
 
 const offers = [
   {
@@ -215,10 +216,10 @@ export default function Offers() {
         <MaxWidthWrapper className='mt-12 px-6'>
           <div className='mt-16'>
             <div className='text-green-600 inline-block'>
-              <h2 className='font-semibold text-2xl sm:text-3xl md:text-2xl'>
+              <h2 className='font-semibold text-2xl sm:text-3xl md:text-2xl underline'>
                 Now here's what we Offer to our paying customers
               </h2>
-              <h2 className='font-medium text-xl sm:text-2xl md:text-2xl mt-2 text-black'>
+              <h2 className='font-bold text-xl sm:text-2xl md:text-2xl mt-2 text-black'>
                 We Build. We Create. We Deliver.
               </h2>
             </div>
@@ -244,7 +245,7 @@ export default function Offers() {
                 <strong>We think big:</strong> One product? Sure. But why stop
                 there? We’ll map out how to turn it into a family of products—{' '}
                 <span className='bg-yellow-400 text-orange-700 font-semibold'>
-                  think expansion, think revenue, think global my friend.
+                  think expansion, think revenue my friend.
                 </span>
               </li>
               <li>
@@ -349,7 +350,7 @@ export default function Offers() {
 
         <MaxWidthWrapper className='mt-6'>
           <section className='px-6'>
-            <h1 className='text-xl md:text-2xl font-base underline'>
+            <h1 className='text-xl md:text-2xl font-base'>
               Need more? You get more...
             </h1>
             <h2 className='text-xl md:text-3xl font-bold'>
@@ -439,6 +440,30 @@ export default function Offers() {
                 Schedule a Discovery call <VideoIcon />
               </Button>
             </div>
+          </section>
+        </MaxWidthWrapper>
+
+        <MaxWidthWrapper className='mt-2'>
+          <section className='px-6 py-10'>
+            <h2 className='text-2xl md:text-5xl font-bold'>
+              Can I ask a free favour from you ? 🫵
+            </h2>
+            <h2 className='text-xl md:text-2xl mb-8 mt-4'>
+              If you have nothing to do about what just happened <br />
+              <strong className='text-green-800 font-bold bg-lime-400'>
+                you can still share the word of mouth
+              </strong>{' '}
+              about what{' '}
+              <strong className='text-green-800 font-bold bg-lime-400'>
+                growthunger
+              </strong> does.
+              <br />
+            </h2>
+            <p className='mt-4 font-semibold'>
+              Copy the below link and share it whoever needs growthunger at
+              their doorstep !
+            </p>
+            <CopyToClipboardButton />
           </section>
         </MaxWidthWrapper>
       </div>

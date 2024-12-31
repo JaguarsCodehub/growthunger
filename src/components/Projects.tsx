@@ -35,6 +35,21 @@ const Projects = () => {
       name: 'Realtime Notes taking app',
       preview: '/images/notes.png',
     },
+    {
+      id: 'profane',
+      name: 'Cuss Words Detection API',
+      preview: '/images/profane-detection.png',
+    },
+    {
+      id: 'backend-food',
+      name: 'MVC Backend Food API',
+      preview: '/images/backend-food-api.png',
+    },
+    {
+      id: 'book',
+      name: 'Mobile App for Readers',
+      preview: '/images/book.png',
+    },
   ];
 
   return (
