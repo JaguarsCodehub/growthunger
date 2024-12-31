@@ -6,6 +6,7 @@ import GridBackground from "@/components/ui/grid-background";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import { IconArrowNarrowDown } from "@tabler/icons-react";
 import { FormInput, VideoIcon } from 'lucide-react';
+import PdfRequestForm from '@/components/pdf-form';
 
 const offers = [
   {
@@ -199,38 +200,9 @@ export default function Offers() {
               </span>
             </h1>
           </div>
-          {/* <div className='-rotate-6'>
-            <Image
-              src='/images/free-ticket.png'
-              alt='free'
-              width={300}
-              height={50}
-            />
-          </div> */}
 
           <div className='mt-8 flex flex-col sm:flex-row items-center gap-4'>
-            <input
-              type='email'
-              placeholder='Your email'
-              className='w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none'
-            />
-            <select className='w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none'>
-              <option disabled>Choose Option</option>
-              <option>Launch in 30 Days Startup Toolkit + MVP roadmap</option>
-              <option>Master Daily Productivity with AI: Tips & Prompts</option>
-              <option>Idea to Execution Workbook</option>
-              <option>Ultimate Pitch Deck to Launch your product</option>
-              <option>
-                Trending Tech stack or robust learning methods ? A Doc
-              </option>
-              <option>
-                People look at design first and price later: A Design Guide
-              </option>
-              <option>How to tell stories that people buy what you say </option>
-            </select>
-            <button className='w-full sm:w-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500'>
-              Submit
-            </button>
+            <PdfRequestForm />
           </div>
           <div>
             <h1 className='font-medium text-lg mt-4 underline'>
