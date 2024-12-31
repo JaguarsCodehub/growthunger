@@ -7,18 +7,15 @@ import TechStack from '@/components/tech-stack';
 import GridBackground from '@/components/ui/grid-background';
 
 import {
-  Video,
-  CreditCard,
-  Globe,
-  Link2,
-  ShieldCheck,
-  Plug2,
   LayoutGrid,
-  Settings2,
   Plus,
   ArrowBigDown,
-
   PhoneCallIcon,
+  Paperclip,
+  Cloud,
+  Box,
+  NetworkIcon,
+  FrameIcon,
 } from 'lucide-react';
 import FeatureCard from '@/components/contribution-graph';
 import AnimatedCards from '@/components/animated-cards';
@@ -38,6 +35,7 @@ import MinesGame from '@/components/MinesGame';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import NotificationsList from '@/components/NotificationsList';
+import { IconContract, IconDeviceLaptop, IconDeviceMobile } from '@tabler/icons-react';
 
 // const links = [
 //   {
@@ -89,32 +87,32 @@ import NotificationsList from '@/components/NotificationsList';
 
 const features = [
   {
-    icon: CreditCard,
+    icon: IconDeviceLaptop,
     title: 'MVP Development',
     description: 'Rapidly prototyping minimum viable products to test ideas.'
   },
   {
-    icon: Video,
+    icon: Cloud,
     title: 'Cloud Based Solutions',
     description: 'Scalable cloud infrastructure and SaaS products.'
   },
   {
-    icon: Link2,
+    icon: Box,
     title: 'Product Modernization',
     description: 'Upgrading legacy systems to modern architectures.'
   },
   {
-    icon: ShieldCheck,
+    icon: NetworkIcon,
     title: 'API Development',
     description: 'Building robust APIs for seamless system communication.'
   },
   {
-    icon: Globe,
+    icon: IconContract,
     title: 'Everything Contract Based',
     description: 'Everything goes professionally by the contract.'
   },
   {
-    icon: Plug2,
+    icon: IconDeviceMobile,
     title: 'Mobile App Development',
     description: 'Native and cross-platform apps for iOS and Android.'
   },
@@ -124,7 +122,7 @@ const features = [
     description: 'Preparing systems to handle future growth.'
   },
   {
-    icon: Settings2,
+    icon: FrameIcon,
     title: 'Wireframing and Prototyping',
     description: 'Visualizing ideas before development.'
   },
@@ -363,6 +361,14 @@ export default function Home() {
           className='bg-emerald-600 border border-emerald-700 rounded-full text-white mt-8 hover:scale-125 transition duration-150 fade-in-20 fade-out-20'
         >
           Lets build together <PhoneCallIcon className='ml-2' />
+        </Button>
+        <Button
+          onClick={() => router.push('/offers')
+          }
+          variant='outline'
+          className='bg-yellow-400 border ml-6 border-yellow-700 rounded-full text-black mt-8 transition duration-150 fade-in-20 fade-out-20'
+        >
+          Go to our sales page <Paperclip className='ml-2' />
         </Button>
       </div>
 

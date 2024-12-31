@@ -1,4 +1,3 @@
-import NotificationsList from '@/components/NotificationsList';
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 
