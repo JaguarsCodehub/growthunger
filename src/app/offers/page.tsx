@@ -208,7 +208,7 @@ export default function Offers() {
           <div>
             <h1 className='font-medium text-lg mt-4 underline'>
               Enter your email here so that we can send you atleast one for
-              absolutely free !
+              absolutely free in the next 48 hours!
             </h1>
           </div>
         </MaxWidthWrapper>
